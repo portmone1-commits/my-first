@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Валерій Солод — Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="bg" aria-hidden="true"></div>
+
+    <main class="page">
+        <header class="header">
+            <h1 class="title">Валерій Солод</h1>
+        </header>
+
+        <section class="layout">
+            <!-- LEFT COLUMN -->
+            <div class="col col-left">
+                <!-- Card -->
+                <section class="panel panel-card" aria-label="Фото">
+                    <a class="card" href="#projects" aria-label="Перейти до проєктів">
+                        <img class="card__img card__img--base" src="./images/card.jpg" alt="Картка" />
+                        <img class="card__img card__img--hover" src="./images/card1.jpg" alt="" aria-hidden="true" />
+                    </a>
+                </section>
+
+                <!-- Skills -->
+                <section class="panel" aria-labelledby="skills">
+                    <h2 class="h2" id="skills">🛠️ Навички</h2>
+                    <ul class="list">
+                        <li>Веб-розробка: HTML5, CSS3, JavaScript (базовий рівень)</li>
+                        <li>Бази даних: SQL (SELECT, JOIN, WHERE), ознайомлення з SQLite</li>
+                        <li>Мови програмування: Python (базовий рівень)</li>
+                        <li>Інструменти: Git, GitHub (контроль версій), Django (базове ознайомлення)</li>
+                        <li>Інше: ООП, робота з API (HTTP-запити), алгоритми/структури даних (базово)</li>
+                    </ul>
+                </section>
+
+                <!-- Education -->
+                <section class="panel" aria-labelledby="edu">
+                    <h2 class="h2" id="edu">🎓 Освіта</h2>
+                    <p class="text">
+                        Онлайн-курси: Fullstack Developer (2025–2026)<br />
+                        Самостійне навчання: проходження практичних курсів, робота над власними pet-проєктами
+                    </p>
+                </section>
+            </div>
+
+            <!-- RIGHT COLUMN -->
+            <div class="col col-right">
+                <!-- About -->
+                <section class="panel" aria-labelledby="about">
+                    <h2 class="h2" id="about">✍️ Про себе</h2>
+                    <p class="text">
+                        Працюю віддалено. Розглядаю стажування. Мотивований і цілеспрямований початківець-фахівець
+                        з сильним бажанням розвиватися в сфері IT. Маю міцну теоретичну базу, підтверджену навчальними
+                        проєктами, і активно займаюся самоосвітою. Швидко навчаюся, відповідально підходжу до завдань
+                        і готовий робити внесок у команду. Шукаю можливість застосувати свої навички на практиці і рости
+                        під керівництвом досвідчених колег.
+                    </p>
+
+                    <h3 class="h3">🧩 Особисті якості</h3>
+                    <ul class="list">
+                        <li>Аналітичний склад розуму</li>
+                        <li>Вміння працювати з великими обсягами інформації</li>
+                        <li>Готовність вчитися і приймати зворотний зв’язок</li>
+                        <li>Відповідальність і уважність до деталей</li>
+                        <li>Навички тайм-менеджменту</li>
+                    </ul>
+                </section>
+
+                <!-- Projects -->
+                <section class="panel panel-dim" id="projects" aria-labelledby="projectsTitle">
+                    <h2 class="h2" id="projectsTitle">💼 Проєкти</h2>
+
+                    <div class="project">
+                        <p class="project__name">
+                            Portfolio Site — проста персональна сторінка з контактами та блоком “Проєкти”.
+                        </p>
+                        <p class="project__meta">Технології: HTML, CSS</p>
+                        <p class="project__link">
+                            Live:
+                            <a href="https://portmone1-commits.github.io/my-project/" target="_blank"
+                                rel="noreferrer noopener">
+                                https://portmone1-commits.github.io/my-project/
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="project">
+                        <p class="project__name">
+                            WebStudio (GoIT Markup HW-06) — навчальний проєкт з адаптивною версткою та базовими
+                            інтеракціями.
+                        </p>
+                        <p class="project__meta">Технології: HTML, CSS, JS</p>
+                        <p class="project__link">
+                            Live:
+                            <a href="https://portmone1-commits.github.io/goit-markup-hw-06/" target="_blank"
+                                rel="noreferrer noopener">
+                                https://portmone1-commits.github.io/goit-markup-hw-06/
+                            </a>
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Languages -->
+                <section class="panel panel-dim" aria-labelledby="langs">
+                    <h2 class="h2" id="langs">🌍 Мови</h2>
+                    <ul class="list">
+                        <li>Українська — рідна</li>
+                        <li>Російська — вільно</li>
+                        <li>Англійська — Pre-Intermediate / Intermediate (читання технічної документації зі словником)
+                        </li>
+                        <li>Наразі проходжу курс English Intensive</li>
+                    </ul>
+                </section>
+            </div>
+        </section>
+
+        <!-- CONTACTS bottom center like mock -->
+        <footer class="contacts" aria-labelledby="contactsTitle">
+            <div class="contacts__panel panel panel-center">
+                <h2 class="h2" id="contactsTitle">✉️ Контакти</h2>
+                <div class="contacts__grid">
+                    <p><span class="muted">Телефон:</span> <a href="tel:+380508120121">+38 (050) 812 01 21</a></p>
+                    <p><span class="muted">Email:</span> <a href="mailto:portmone1@gmail.com">portmone1@gmail.com</a>
+                    </p>
+                    <p><span class="muted">Формат роботи:</span> віддалено</p>
+                    <p><span class="muted">Статус:</span> Розглядаю стажування / Junior-позицію</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>
