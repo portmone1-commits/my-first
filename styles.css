@@ -11,7 +11,7 @@
     --stroke: rgba(255, 255, 255, 0.22);
 
     --text: rgba(255, 255, 255, 0.92);
-    --muted: rgba(255, 255, 255, 0.72);
+    --muted: rgba(110, 105, 105, 0.72);
 
     --shadow: 0 18px 55px rgba(0, 0, 0, 0.25);
     --blur: blur(10px);
@@ -31,7 +31,7 @@ body {
 }
 
 header {
-    color: rgb(5, 240, 158);
+    color: rgba(233, 193, 239, 0.984);
 }
 
 /* ========== BACKGROUND ========== */
@@ -43,6 +43,7 @@ header {
     filter: saturate(1.05) contrast(1.02);
     pointer-events: none;
 }
+
 
 /* ========== TYPO (base) ========== */
 
@@ -159,8 +160,7 @@ a:focus-visible {
 }
 
 .card:focus-visible {
-    box-shadow:
-        0 0 0 3px rgba(255, 255, 255, 0.38),
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.38),
         0 18px 60px rgba(0, 0, 0, 0.35);
 }
 
