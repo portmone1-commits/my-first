@@ -25,70 +25,85 @@ body {
 body {
     margin: 0;
     font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-    color: var(--text);
+    color: black;
     background: #0b1630;
     overflow-x: hidden;
+}
+
+header {
+    color: rgb(5, 240, 158);
 }
 
 /* ========== BACKGROUND ========== */
 .bg {
     position: fixed;
     inset: 0;
-    z-index: -2;
+    z-index: 0;
     background: url("./images/background1.jpg") center / cover no-repeat fixed;
     filter: saturate(1.05) contrast(1.02);
+    pointer-events: none;
 }
 
-/* ========== PAGE ========== */
-.page {
-    width: 1158px;
-    margin: 0 auto;
-    padding: 30px 18px 34px;
-}
+/* ========== TYPO (base) ========== */
 
-.header {
-    display: grid;
-    place-items: center;
-    margin-bottom: 14px;
-}
 
-.title {
-    margin: 0;
-    font-size: 44px;
+.h2 {
+    margin: 0 0 10px;
+    font-size: 20px;
     font-weight: 800;
-    letter-spacing: 0.6px;
-    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
 
-/* ========== LAYOUT ========== */
-.layout {
-    display: grid;
-    grid-template-columns: 380px 1fr;
-    gap: 22px;
-    align-items: start;
+.h3 {
+    margin: 14px 0 8px;
+    font-size: 17px;
+    font-weight: 800;
 }
 
-.col {
-    display: grid;
-    gap: 18px;
+.text {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: black;
 }
 
-/* ========== PANELS ========== */
+.list {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.list li+li {
+    margin-top: 4px;
+}
+
+/* ========== LINKS ========== */
+a {
+    color: rgba(5, 52, 243, 0.981);
+    text-decoration: none;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.28);
+}
+
+a:hover,
+a:focus-visible {
+    border-bottom-color: rgba(193, 190, 210, 0.7);
+}
+
+/* ========== COMPONENTS ========== */
 .panel {
     background: linear-gradient(180deg, var(--glass-1), var(--glass-2));
     border: 1px solid var(--stroke);
-    border-radius: 22px;
+    border-radius: 18px;
     box-shadow: var(--shadow);
     backdrop-filter: var(--blur);
     -webkit-backdrop-filter: var(--blur);
-    padding: 18px;
-}
-
-.panel-card {
     padding: 14px;
 }
 
-/* projects/langs in mock look more "dim" */
+.panel-card {
+    padding: 10px;
+}
+
 .panel-dim {
     background: linear-gradient(180deg,
             rgba(255, 255, 255, 0.10),
@@ -101,38 +116,7 @@ body {
     text-align: center;
 }
 
-/* ========== TYPO ========== */
-.h2 {
-    margin: 0 0 10px;
-    font-size: 22px;
-    font-weight: 800;
-}
-
-.h3 {
-    margin: 14px 0 8px;
-    font-size: 18px;
-    font-weight: 800;
-}
-
-.text {
-    margin: 0;
-    font-size: 15px;
-    line-height: 1.55;
-    color: var(--text);
-}
-
-.list {
-    margin: 0;
-    padding-left: 18px;
-    font-size: 15px;
-    line-height: 1.55;
-}
-
-.list li+li {
-    margin-top: 4px;
-}
-
-/* ========== CARD SWAP ========== */
+/* Card swap */
 .card {
     position: relative;
     display: block;
@@ -146,7 +130,8 @@ body {
 .card__img {
     display: block;
     width: 100%;
-    height: 340px;
+    height: 260px;
+    /* mobile */
     object-fit: cover;
     transform: scale(1.02);
     transition: opacity 260ms ease, transform 260ms ease;
@@ -174,10 +159,12 @@ body {
 }
 
 .card:focus-visible {
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.38), 0 18px 60px rgba(0, 0, 0, 0.35);
+    box-shadow:
+        0 0 0 3px rgba(255, 255, 255, 0.38),
+        0 18px 60px rgba(0, 0, 0, 0.35);
 }
 
-/* ========== PROJECTS ========== */
+/* Projects */
 .project+.project {
     margin-top: 12px;
     padding-top: 12px;
@@ -186,12 +173,12 @@ body {
 
 .project__name {
     margin: 0 0 4px;
-    font-weight: 700;
+    font-weight: 400;
+
 }
 
 .project__meta {
     margin: 0 0 6px;
-    color: var(--muted);
     font-size: 14px;
 }
 
@@ -200,19 +187,7 @@ body {
     font-size: 14px;
 }
 
-/* links like in mock (subtle) */
-a {
-    color: rgba(255, 255, 255, 0.88);
-    text-decoration: none;
-    border-bottom: 1px dashed rgba(255, 255, 255, 0.28);
-}
-
-a:hover,
-a:focus-visible {
-    border-bottom-color: rgba(255, 255, 255, 0.70);
-}
-
-/* ========== CONTACTS (bottom center) ========== */
+/* Contacts */
 .contacts {
     margin-top: 18px;
     display: grid;
@@ -220,22 +195,172 @@ a:focus-visible {
 }
 
 .contacts__panel {
-    width: 520px;
-    /* як у макеті — компактний блок по центру */
+    width: 100%;
+    max-width: 520px;
 }
 
 .contacts__grid p {
     margin: 6px 0;
-    font-size: 15px;
+    font-size: 14px;
+    line-height: 1.5;
 }
 
 .muted {
-    color: var(--muted);
+    color: black;
 }
 
-/* desktop-only protection */
-@media (max-width: 1200px) {
-    body {
-        min-width: 1200px;
+/* ========== LAYOUT (mobile-first) ========== */
+.page {
+    width: 100%;
+    max-width: 428px;
+    margin: 0 auto;
+    padding: 18px 16px 22px;
+}
+
+.header {
+    display: grid;
+    place-items: center;
+    margin-bottom: 14px;
+}
+
+.title {
+    margin: 0;
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: 0.6px;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    align-items: start;
+}
+
+.col {
+    display: grid;
+    gap: 16px;
+}
+
+/* ========== BREAKPOINT: 768px ========== */
+@media (min-width: 768px) {
+    .page {
+        max-width: 768px;
+        padding: 24px 24px 28px;
     }
+
+    .title {
+        font-size: 40px;
+    }
+
+    .layout {
+        grid-template-columns: 320px 1fr;
+        gap: 18px;
+    }
+
+    .panel {
+        border-radius: 20px;
+        padding: 16px;
+    }
+
+    .panel-card {
+        padding: 12px;
+    }
+
+    .card__img {
+        height: 300px;
+    }
+
+    .h2 {
+        font-size: 21px;
+    }
+
+    .text,
+    .list,
+    .contacts__grid p {
+        font-size: 15px;
+    }
+}
+
+/* ========== BREAKPOINT: 1158px ========== */
+@media (min-width: 1158px) {
+    .page {
+        max-width: 1158px;
+        width: 1158px;
+        padding: 30px 18px 34px;
+    }
+
+    .title {
+        font-size: 44px;
+    }
+
+    .layout {
+        grid-template-columns: 380px 1fr;
+        gap: 22px;
+    }
+
+    .col {
+        gap: 18px;
+    }
+
+    .panel {
+        border-radius: 22px;
+        padding: 18px;
+    }
+
+    .panel-card {
+        padding: 14px;
+    }
+
+    .card__img {
+        height: 340px;
+    }
+
+    .h2 {
+        font-size: 22px;
+    }
+
+    .h3 {
+        font-size: 18px;
+    }
+
+    .text,
+    .list,
+    .contacts__grid p {
+        font-size: 15px;
+        line-height: 1.55;
+    }
+
+    .contacts__panel {
+        width: 520px;
+        max-width: 520px;
+    }
+}
+
+/* Canvas над фоном, але під контентом */
+.ripples {
+    position: fixed;
+    inset: 0;
+    z-index: -3;
+    /* над .bg, під контентом */
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    filter: saturate(1.05) contrast(1.02);
+}
+
+.page {
+    position: relative;
+    z-index: 2;
+}
+
+/* “вітер” для заголовка (JS керує змінними) */
+.title {
+    --wx: 0px;
+    --wy: 0px;
+    --wr: 0deg;
+    transform: translate3d(var(--wx), var(--wy), 0) rotate(var(--wr));
+    transform-origin: 50% 70%;
+    will-change: transform;
 }
